@@ -9,7 +9,7 @@
             },
             "textcolor": {
                 "text": "Text color",
-                "type": "textinput",
+                "type": "color",
                 "value": "1, 1, 1"
             },
             "textsize": {
@@ -25,12 +25,12 @@
             "rainsize": {
                 "text": "Rain size",
                 "type": "textinput",
-                "value": "12"
+                "value": "14"
             },
-            "backgroundcolor": {
+            "rainbackground": {
                 "text": "Background color",
                 "type": "color",
-                "value": "0, 0, 0"
+                "value": "0"
             },
             "schemecolor": {
                 "text": "Scheme color",
@@ -40,13 +40,13 @@
             "speed": {
                 "text": "Animation speed",
                 "type": "slider",
-                "value": 60,
+                "value": 61,
                 "min": 1,
                 "max": 100,
                 "editable": true
             }
         }
     },
-    "title": "Matrix Falling Rain - Customizable",
+    "title": "Matrix Falling Rain",
     "type": "web"
 }

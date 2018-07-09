@@ -21,7 +21,7 @@ body {
 canvas {
   display: block;
   z-index: -99;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 #text {
