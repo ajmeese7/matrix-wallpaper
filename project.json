@@ -1,0 +1,52 @@
+{
+    "file": "index.html",
+    "general": {
+        "properties": {
+            "text": {
+                "text": "Wallpaper text",
+                "type": "textinput",
+                "value": "Welcome to Matrix Wallpaper"
+            },
+            "textcolor": {
+                "text": "Text color",
+                "type": "textinput",
+                "value": "1, 1, 1"
+            },
+            "textsize": {
+                "text": "Text size",
+                "type": "textinput",
+                "value": "28"
+            },
+            "raincolor": {
+                "text": "Rain color",
+                "type": "color",
+                "value": "0, 1, 0"
+            },
+            "rainsize": {
+                "text": "Rain size",
+                "type": "textinput",
+                "value": "12"
+            },
+            "backgroundcolor": {
+                "text": "Background color",
+                "type": "color",
+                "value": "0, 0, 0"
+            },
+            "schemecolor": {
+                "text": "Scheme color",
+                "type": "color",
+                "value": "0, 0, 0"
+            },
+            "speed": {
+                "text": "Animation speed",
+                "type": "slider",
+                "value": 60,
+                "min": 1,
+                "max": 100,
+                "editable": true
+            }
+        }
+    },
+    "title": "Matrix Falling Rain - Customizable",
+    "type": "web"
+}
