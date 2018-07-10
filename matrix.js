@@ -10,6 +10,8 @@ var matrix = "\u0402\u0403\u040A\u040B\u0411\u0414\u0416\u0419\u041B\u0423\u0424
 matrix = matrix.split('');
 var rainColor = "rgb(0, 255, 0)";
 var backgroundColor = "#000000";
+var rainbowColor;
+var rainbowMode = false;
 
 var style = window.getComputedStyle(canvas, null).getPropertyValue('font-size');
 canvas.style.fontSize = (font_size + 1) + 'px';
@@ -34,14 +36,25 @@ function draw() {
   ctx.fillStyle = "rgba(0, 0, 0, 0.04)";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-  ctx.fillStyle = rainColor;
+  if (rainbowMode) {
+    rainbowColor = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';;
+    ctx.fillStyle = rainbowColor;
+  } else {
+    ctx.fillStyle = rainColor;
+  }
+
   ctx.font = font_size + "px arial";
 
   for (var i = 0; i < drops.length; i++) {
     ctx.fillStyle = backgroundColor;
     ctx.fillRect(i * font_size, drops[i] * font_size, font_size, font_size);
 
-    ctx.fillStyle = rainColor;
+    if (rainbowMode) {
+      ctx.fillStyle = rainbowColor;
+    } else {
+      ctx.fillStyle = rainColor;
+    }
+
     var letter = matrix[Math.floor(Math.random() * matrix.length)];
     ctx.fillText(letter, i * font_size, drops[i] * font_size);
 
@@ -66,7 +79,6 @@ setTimeout(function() {
   fastSpeedOver = true;
   draw();
 }, 1000);
-// IDEA: Add rainbow mode?
 
 
 /* ################################################
@@ -106,6 +118,11 @@ window.wallpaperPropertyListener = {
               return Math.ceil(c * 255);
             });
             rainColor = 'rgb(' + color + ')';
+        }
+
+        // Read rainbow mode setting
+        if (properties.rainbowmode) {
+            rainbowMode = properties.rainbowmode.value;
         }
 
         // Set rain size

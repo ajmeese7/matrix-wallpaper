@@ -1,4 +1,7 @@
 {
+    "workshopid": 1436702629,
+    "contentrating" : "Everyone",
+    "description": "A customizable Matrix falling rain effect. If you try it and it isn't working for you, try fiddling with the settings for the colors a bit and it should immediately start working.",
     "file": "index.html",
     "general": {
         "properties": {
@@ -21,6 +24,11 @@
                 "text": "Rain color",
                 "type": "color",
                 "value": "0, 1, 0"
+            },
+            "rainbowmode": {
+                "text": "Rainbow mode",
+                "type": "bool",
+                "value": false
             },
             "rainsize": {
                 "text": "Rain size",
@@ -47,6 +55,9 @@
             }
         }
     },
-    "title": "Matrix Falling Rain",
-    "type": "web"
+    "preview" : "preview.jpg",
+  	"tags" : [ "Cyberpunk" ],
+  	"title" : "Matrix Falling Rain",
+  	"type" : "web",
+  	"visibility" : "public"
 }
