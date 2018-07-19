@@ -52,6 +52,21 @@
                 "min": 1,
                 "max": 100,
                 "editable": true
+            },
+            "typinganimation": {
+                "text": "Typing animation",
+                "type": "bool",
+                "value": true
+            },
+            "typingspeed": {
+                "text": "Typing speed",
+                "type": "textinput",
+                "value": "50"
+            },
+            "typingdelay": {
+              "text": "Typing delay (s)",
+              "type": "textinput",
+              "value": "10"
             }
         }
     },

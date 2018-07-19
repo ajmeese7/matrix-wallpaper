@@ -10,7 +10,7 @@ var matrix = "\u0402\u0403\u040A\u040B\u0411\u0414\u0416\u0419\u041B\u0423\u0424
 matrix = matrix.split('');
 var rainColor = "rgb(0, 255, 0)";
 var backgroundColor = "#000000";
-var rainbowColor;
+var rainbowColor, typeText, wallpaperText, typingSpeed;
 var rainbowMode = false;
 
 var style = window.getComputedStyle(canvas, null).getPropertyValue('font-size');
@@ -26,6 +26,25 @@ for (var xCoord = 0; xCoord < num_columns; xCoord++) {
 }
 
 function draw() {
+  // Handles typing animation for text (when the option is enabled)
+  if (typeText && timer > typeDelay) {
+    var i = 0;
+    document.getElementById("text").innerHTML = "";
+    typeWriter();
+
+    function typeWriter() {
+      if (i < wallpaperText.length) {
+        document.getElementById("text").innerHTML += wallpaperText.charAt(i);
+        i++;
+        setTimeout(typeWriter, typingSpeed);
+      }
+    }
+
+    timer = 0;
+  } else {
+    timer += speed;
+  }
+
   canvas.style.fontSize = (font_size + 1) + 'px';
 
   var viewportHeight = (typeof window.innerHeight != 'undefined' ? window.innerHeight : document.body.offsetHeight);
@@ -89,6 +108,7 @@ window.wallpaperPropertyListener = {
         // Read text
         if (properties.text) {
             var text = properties.text.value;
+            wallpaperText = text;
             document.getElementById("text").innerText = text;
         }
 
@@ -157,6 +177,21 @@ window.wallpaperPropertyListener = {
         // Read custom slider
         if (properties.speed) {
             speed = 101 - properties.speed.value;
+        }
+
+        // Read typing animation setting
+        if (properties.typinganimation) {
+            typeText = properties.typinganimation.value;
+        }
+
+        // Read typing speed
+        if (properties.typingspeed) {
+            typingSpeed = properties.typingspeed.value;
+        }
+
+        // Read typing delay
+        if (properties.typingdelay) {
+            typeDelay = properties.typingdelay.value * 1000;
         }
     } // applyUserProperties
 };
