@@ -2,14 +2,22 @@
   <h1 align="center">👓 Matrix Wallpaper 👓</h1>
 </p>
 
-<!-- TODO: Start making clicking these badges useful on all projects -->
 <p align="center">
-   <img src="https://img.shields.io/badge/language-JavaScript-yellow"/>
-   <img src="https://img.shields.io/github/license/ajmeese7/matrix-wallpaper"/>
-   <img src="https://img.shields.io/github/stars/ajmeese7/matrix-wallpaper"/>
-   <img src="https://img.shields.io/github/forks/ajmeese7/matrix-wallpaper"/>
-   <!-- TODO: Find a way to link this one and all the rest to a star action -->
-   <img src="https://img.shields.io/static/v1?label=%F0%9F%8C%9F&message=If%20Useful&style=style=flat&color=BC4E99" alt="Star Badge"/>
+  <a href="https://github.com/ajmeese7/matrix-wallpaper/search?l=javascript">
+    <img src="https://img.shields.io/badge/language-JavaScript-yellow" alt="JavaScript" />
+  </a>
+  <a href="https://github.com/ajmeese7/matrix-wallpaper/blob/master/LICENSE.md">
+    <img src="https://img.shields.io/github/license/ajmeese7/matrix-wallpaper" alt="License" />
+  </a>
+  <a href="https://github.com/ajmeese7/matrix-wallpaper/stargazers">
+    <img src="https://img.shields.io/github/stars/ajmeese7/matrix-wallpaper" alt="Stars" />
+  </a>
+  <a href="https://github.com/ajmeese7/matrix-wallpaper/network/members">
+    <img src="https://img.shields.io/github/forks/ajmeese7/matrix-wallpaper" alt="Forks" />
+  </a>
+  <a href="https://github.com/ajmeese7/matrix-wallpaper/stargazers">
+    <img src="https://img.shields.io/static/v1?label=%F0%9F%8C%9F&message=If%20Useful&style=style=flat&color=BC4E99" alt="Leave a Star!"/>
+  </a>
 </p>
 
 ![Matrix Example](https://user-images.githubusercontent.com/17814535/92415161-5162da80-f11d-11ea-99a2-f8dc269eeff1.png)
