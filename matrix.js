@@ -16,13 +16,16 @@ var style = window.getComputedStyle(canvas, null).getPropertyValue("font-size");
 canvas.style.fontSize = (font_size + 1) + "px";
 var font_size = parseFloat(style);
 
-// NOTE: Doesn't work well when text size reduced. Rework?
-var num_columns = canvas.width / font_size;
 var drops = [];
-
-for (let xCoord = 0; xCoord < num_columns; xCoord++) {
-  drops[xCoord] = 1;
+function createDrops() {
+  drops = [];
+  var num_columns = canvas.width / font_size;
+  
+  for (let xCoord = 0; xCoord < num_columns; xCoord++) {
+    drops[xCoord] = 1;
+  }
 }
+createDrops();
 
 const getRandomColor = () => Math.floor(Math.random() * 256);
 
@@ -102,8 +105,11 @@ window.wallpaperPropertyListener = {
     }
 
     if (properties.rainbowmode) rainbowMode = properties.rainbowmode.value;
-    if (properties.rainsize) font_size = properties.rainsize.value;
     if (properties.speed) speed = 101 - properties.speed.value;
+    if (properties.rainsize) {
+      font_size = properties.rainsize.value;
+      createDrops();
+    }
 
     // Read rain background color
     if (properties.rainbackground) {

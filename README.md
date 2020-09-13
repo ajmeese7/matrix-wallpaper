@@ -40,4 +40,3 @@ The project, with all applicable images, is available on Steam
 - Add custom font support from a dropdown
 - Find a way to actually change/use the scheme color
 - Make background color/image modifiable?
-- Make changing the text size still fill the whole screen with rain
